@@ -8,6 +8,8 @@ namespace TestProject1
         [TestMethod]
         public void TestMethod1()
         {
+            var arch = System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant();
+            Assert.AreEqual("arm64", arch);
         }
     }
 }
